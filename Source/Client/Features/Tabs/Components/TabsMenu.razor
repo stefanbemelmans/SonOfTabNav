@@ -1,0 +1,15 @@
+﻿@inherits TabsMenuBase
+<div class="flex-row justify-content-start">
+  TabList
+  @foreach (var tab in TabList)
+  {
+    <span id="@tab.Title" @onclick="@(e => OnTabSelect(tab))" class="m-1 ml-2">
+      @tab.Title
+    </span>
+  }
+</div>
+<div class="flex-column bg-info">
+  @TabState.CurrentTab.Title
+  @TabState.CurrentTab.Content
+</div>
+
