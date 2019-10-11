@@ -1,11 +1,12 @@
 ﻿namespace SonOfTabNav.Client.Features.Base.Components
 {
+  using BlazorState.Features.Routing;
   using BlazorState.Pipeline.ReduxDevTools;
   using SonOfTabNav.Client.Features.Application;
   using SonOfTabNav.Client.Features.Counter;
-  using SonOfTabNav.Client.Features.WeatherForecast;
   using SonOfTabNav.Client.Features.EventStream;
   using SonOfTabNav.Client.Features.Tabs;
+  using SonOfTabNav.Client.Features.WeatherForecast;
 
   /// <summary>
   /// Makes access to the State a little easier and by inheriting from
@@ -21,8 +22,8 @@
     internal ApplicationState ApplicationState => GetState<ApplicationState>();
     internal CounterState CounterState => GetState<CounterState>();
     internal EventStreamState EventStreamState => GetState<EventStreamState>();
-    internal WeatherForecastsState WeatherForecastsState => GetState<WeatherForecastsState>();
+    internal RouteState RouteState => GetState<RouteState>();
     internal TabState TabState => GetState<TabState>();
-  
+    internal WeatherForecastsState WeatherForecastsState => GetState<WeatherForecastsState>();
   }
 }
